@@ -1,0 +1,25 @@
+* {
+  font-family: Chalkduster, fantasy;
+  margin: 0;
+}
+
+h1 {
+  font-size: 60px;
+  color: white;
+  background-color: rgb(71, 56, 56);
+  padding: 20px;
+}
+
+/* https://www.w3schools.com/css/css_grid.asp */
+.list-container {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.list-item {
+  background-color: rgb(255, 244, 231);
+  border-bottom: 3px solid rgb(145, 126, 126);
+  padding: 13px;
+  font-size: 30px;
+  text-align: left;
+}
