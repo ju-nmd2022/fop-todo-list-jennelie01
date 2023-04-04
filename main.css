@@ -1,25 +1,48 @@
 * {
-  font-family: Chalkduster, fantasy;
+  font-family: "Indie Flower", cursive;
   margin: 0;
+}
+
+body {
+  background-color: rgb(188, 216, 253);
 }
 
 h1 {
   font-size: 60px;
   color: white;
-  background-color: rgb(71, 56, 56);
-  padding: 20px;
+  background-color: rgb(188, 216, 253);
+  padding: 5px;
 }
 
 /* https://www.w3schools.com/css/css_grid.asp */
 .list-container {
   display: grid;
-  grid-template-columns: auto;
+  /* takes up 80%*/
+  grid-template-columns: 1fr 20%;
 }
 
 .list-item {
-  background-color: rgb(255, 244, 231);
-  border-bottom: 3px solid rgb(145, 126, 126);
+  color: white;
+  background-color: rgb(188, 216, 253);
+  border-bottom: 3px solid rgb(255, 255, 255);
   padding: 13px;
   font-size: 30px;
   text-align: left;
+}
+
+#addItem {
+  display: flex;
+  color: white;
+  font-size: 30px;
+  background-color: rgb(188, 216, 253);
+}
+
+#addItem:hover {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+/* to not make the border go all around from the input type */
+input {
+  border: hidden;
 }
