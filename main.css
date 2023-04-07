@@ -1,43 +1,35 @@
 * {
   font-family: "Indie Flower", cursive;
   margin: 0;
-}
-
-body {
   background-color: rgb(188, 216, 253);
+  color: white;
 }
 
 h1 {
   font-size: 60px;
-  color: white;
-  background-color: rgb(188, 216, 253);
   padding: 5px;
 }
 
-/* https://www.w3schools.com/css/css_grid.asp */
 .list-container {
   display: grid;
   /* takes up 80%*/
   grid-template-columns: 1fr 20%;
 }
 
-.list-item {
-  color: white;
-  background-color: rgb(188, 216, 253);
+#to-do {
   border-bottom: 3px solid rgb(255, 255, 255);
   padding: 13px;
   font-size: 30px;
   text-align: left;
 }
 
-#addItem {
+#add-button {
   display: flex;
-  color: white;
   font-size: 30px;
   background-color: rgb(188, 216, 253);
 }
 
-#addItem:hover {
+#add-button:hover {
   color: rgb(0, 0, 0);
   cursor: pointer;
 }
