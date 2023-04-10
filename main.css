@@ -11,20 +11,26 @@ h1 {
 }
 
 .list-container {
-  display: grid;
-  /* takes up 80%*/
-  grid-template-columns: 1fr 20%;
+  /* display: grid;
+  takes up 80%
+  grid-template-columns: 1fr 40%; */
+  width: 100%;
+  max-width: 600px;
 }
 
-#to-do {
+.to-do {
   border-bottom: 3px solid rgb(255, 255, 255);
   padding: 13px;
   font-size: 30px;
   text-align: left;
+  min-width: 600px;
+}
+
+.input-field {
+  display: flex;
 }
 
 #add-button {
-  display: flex;
   font-size: 30px;
   background-color: rgb(188, 216, 253);
 }
@@ -37,4 +43,22 @@ h1 {
 /* to not make the border go all around from the input type */
 input {
   border: hidden;
+}
+
+.added-task {
+  display: flex;
+  justify-content: left;
+  width: 600px;
+}
+
+.delete-button,
+.check-button {
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.delete-button:hover,
+.check-button:hover {
+  color: black;
 }

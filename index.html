@@ -14,12 +14,16 @@
   </head>
   <body>
     <h1>to-do list</h1>
-    <!-- container holds all info -->
-    <main class="list-container">
-      <input type="text" id="to-do" />
-      <input type="button" id="add-button" value="add" />
+    <main>
+      <div class="list-container">
+        <div class="input-field">
+          <input type="text" id="to-do" class="to-do" />
+          <input type="button" id="add-button" value="add" />
+        </div>
+
+        <div id="items-list"></div>
+      </div>
     </main>
-    <script src="to-do.js"></script>
     <!-- <div class="list-item">2</div>
       <div class="list-item">3</div>
       <div class="list-item">4</div>
@@ -30,4 +34,5 @@
       <div class="list-item">9</div>
       <div class="list-item">10</div> -->
   </body>
+  <script src="to-do.js"></script>
 </html>
