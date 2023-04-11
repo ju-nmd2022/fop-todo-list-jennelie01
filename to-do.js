@@ -1,4 +1,4 @@
-const toDos = [];
+let toDos = [];
 let toDo = document.getElementById("to-do");
 let itemsList = document.querySelector("#items-list");
 let addButton = document.getElementById("add-button");
@@ -16,6 +16,9 @@ function addItemToList() {
   console.log(toDos);
 
   addItemToHtml(task);
+  // clear input value after it's added
+  toDo.value = "";
+  saveInLocalStorage();
 }
 
 function addItemToHtml(task) {
@@ -36,6 +39,12 @@ function addItemToHtml(task) {
   // delete task
   deleteButton.addEventListener("click", () => {
     itemsList.removeChild(toDoElement);
+
+    // filter returns elements that return true in the following condition
+    // function that keeps task if object id does not match html created element id
+    toDos = toDos.filter((toDo) => toDo.id !== task.id); // returns true if not equal
+
+    saveInLocalStorage();
   });
 
   // creates check button
@@ -47,13 +56,23 @@ function addItemToHtml(task) {
   // marks task as done
   checkButton.addEventListener("click", () => {
     toDoText.style.textDecoration = "line-through";
+
+    // map returns all elements with alterations
+    // if id's match, return a task with property done = true
+    toDos = toDos.map((toDo) => {
+      if (toDo.id === task.id) {
+        return { ...toDo, done: true };
+      }
+      return toDo;
+    });
+
+    saveInLocalStorage();
   });
 
   itemsList.prepend(toDoElement);
 }
 
-/* <div>
-  <p>Task 1</p>
-  <button onClick{() => function_to_check()}> V </button>
-  <button onClick={() => function_to_delete()}> X </button>
-</div>; */
+function saveInLocalStorage() {
+  const toDosStringified = JSON.stringify(toDos);
+  localStorage.setItem("toDos", toDosStringified);
+}
