@@ -66,8 +66,8 @@ function addToDoElement(task) {
   checkButton.addEventListener("click", () => {
     toDoText.style.textDecoration = "line-through";
 
-    // map returns all elements with alterations, source for method https://www.freecodecamp.org/news/manipulating-arrays-in-javascript/
-    // if id's match, return a task with property done = true
+    // map returns all tasks with alterations, source for method https://www.freecodecamp.org/news/manipulating-arrays-in-javascript/
+    // if id's match, return a task with attribute done = true
     toDos = toDos.map((toDo) => {
       if (toDo.id === task.id) {
         return { ...toDo, done: true };
@@ -83,13 +83,13 @@ function addToDoElement(task) {
 }
 
 // the following lines about json and forEach was a solution I got help with via chatGPT which I adapted to my code
-// turns object into string
+// turns keys into strings so localstorage can read it
 function saveInLocalStorage() {
   const toDosStringified = JSON.stringify(toDos);
   localStorage.setItem("toDos", toDosStringified);
 }
 
-// checks if to-do exists in storage, parse turns string back into object, and loads them
+// checks if to-do exists in storage, parse turns strings back into keys, and loads them
 function loadToDos() {
   const toDoStorage = localStorage.getItem("toDos");
 
