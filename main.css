@@ -1,0 +1,61 @@
+* {
+  font-family: "Indie Flower", cursive;
+  margin: 0;
+  background-color: rgb(188, 216, 253);
+  color: white;
+}
+
+h1 {
+  font-size: 60px;
+  padding: 5px;
+}
+
+.list-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.to-do {
+  border-bottom: 3px solid rgb(255, 255, 255);
+  padding: 13px;
+  font-size: 30px;
+  text-align: left;
+  min-width: 600px;
+}
+
+.input-field {
+  display: flex;
+}
+
+#add-button {
+  font-size: 30px;
+  background-color: rgb(188, 216, 253);
+}
+
+#add-button:hover {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+/* to not make the border go all around from the input type */
+input {
+  border: hidden;
+}
+
+.added-task {
+  display: flex;
+  justify-content: left;
+  width: 600px;
+}
+
+.delete-button,
+.check-button {
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.delete-button:hover,
+.check-button:hover {
+  color: black;
+}
